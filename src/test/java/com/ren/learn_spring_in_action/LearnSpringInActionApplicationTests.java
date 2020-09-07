@@ -8,6 +8,7 @@ class LearnSpringInActionApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println("++++++++++++++++++++");
     }
 
 }
