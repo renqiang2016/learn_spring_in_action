@@ -1,10 +1,10 @@
-package com.ren.learn_spring_in_action.service.impl;
+package com.ren.learn_spring_in_action.service;
 
 import com.ren.learn_spring_in_action.dao.repository.UserRepository;
 import com.ren.learn_spring_in_action.model.User;
-import com.ren.learn_spring_in_action.service.UserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
@@ -14,12 +14,12 @@ import org.springframework.stereotype.Service;
  * @since 2020/9/8 9:51
  */
 @Service
-public class UserDetailServiceImpl implements UserDetailService {
+public class UserDetailsServiceImpl implements UserDetailsService {
 
     private UserRepository userRepository;
 
     @Autowired
-    public UserDetailServiceImpl(UserRepository userRepository) {
+    public UserDetailsServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 

@@ -1,26 +1,10 @@
-delete from Taco_Order_Tacos;
-delete from Taco_Ingredients;
-delete from Taco;
-delete from Taco_Order;
-
-delete from Ingredient;
-insert into Ingredient (id, name, type) 
-                values ('FLTO', 'Flour Tortilla', '0');
-insert into Ingredient (id, name, type) 
-                values ('COTO', 'Corn Tortilla', '0');
-insert into Ingredient (id, name, type) 
-                values ('GRBF', 'Ground Beef', '1');
-insert into Ingredient (id, name, type) 
-                values ('CARN', 'Carnitas', '1');
-insert into Ingredient (id, name, type) 
-                values ('TMTO', 'Diced Tomatoes', '2');
-insert into Ingredient (id, name, type) 
-                values ('LETC', 'Lettuce', '2');
-insert into Ingredient (id, name, type) 
-                values ('CHED', 'Cheddar', '3');
-insert into Ingredient (id, name, type) 
-                values ('JACK', 'Monterrey Jack', '3');
-insert into Ingredient (id, name, type) 
-                values ('SLSA', 'Salsa', '4');
-insert into Ingredient (id, name, type) 
-                values ('SRCR', 'Sour Cream', '4');
+INSERT INTO `ingredient` VALUES ('CARN', 'Carnitas', '1');
+INSERT INTO `ingredient` VALUES ('CHED', 'Cheddar', '3');
+INSERT INTO `ingredient` VALUES ('COTO', 'Corn Tortilla', '0');
+INSERT INTO `ingredient` VALUES ('FLTO', 'Flour Tortilla', '0');
+INSERT INTO `ingredient` VALUES ('GRBF', 'Ground Beef', '1');
+INSERT INTO `ingredient` VALUES ('JACK', 'Monterrey Jack', '3');
+INSERT INTO `ingredient` VALUES ('LETC', 'Lettuce', '2');
+INSERT INTO `ingredient` VALUES ('SLSA', 'Salsa', '4');
+INSERT INTO `ingredient` VALUES ('SRCR', 'Sour Cream', '4');
+INSERT INTO `ingredient` VALUES ('TMTO', 'Diced Tomatoes', '2');
