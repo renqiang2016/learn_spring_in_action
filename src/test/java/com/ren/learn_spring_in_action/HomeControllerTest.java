@@ -1,6 +1,6 @@
 package com.ren.learn_spring_in_action;
 
-import com.ren.learn_spring_in_action.controller.HomeController;
+import com.ren.learn_spring_in_action.controller.WebConfig;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -15,7 +15,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @version 1.0
  * @since 2020/9/1 11:26
  */
-@WebMvcTest(HomeController.class)
+@WebMvcTest(WebConfig.class)
 public class HomeControllerTest {
 
     @Autowired

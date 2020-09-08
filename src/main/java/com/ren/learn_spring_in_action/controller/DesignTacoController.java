@@ -40,6 +40,7 @@ public class DesignTacoController {
 
     @GetMapping
     public String showDesignForm(Model model) {
+        System.out.println(Type.PROTEIN);
         List<Ingredient> ingredients = new ArrayList<>();
         ingredientRepository.findAll().forEach(ingredients::add);
 
