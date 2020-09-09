@@ -1,4 +1,4 @@
-package com.ren.learn_spring_in_action.service;
+package com.ren.learn_spring_in_action.service.impl;
 
 import com.ren.learn_spring_in_action.dao.repository.UserRepository;
 import com.ren.learn_spring_in_action.model.User;
