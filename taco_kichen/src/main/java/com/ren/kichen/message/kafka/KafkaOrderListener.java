@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
-public class OrderListener {
+public class KafkaOrderListener {
     @KafkaListener(topics = "taco.orders.topic")
     public void receiveOrder(Order order) {
         System.out.println("=======kafka listener model: " + order.toString());
@@ -23,6 +23,6 @@ public class OrderListener {
     public void receiveOrder(Order order, ConsumerRecord<String, Order> record) {
         log.info("Received from partition {} with timestamp {}",
                 record.partition(), record.timestamp());
-        System.out.println("=======kafka listener model: " + order.toString());
+        System.out.println("=======kafka listener model2: " + order.toString());
     }
 }

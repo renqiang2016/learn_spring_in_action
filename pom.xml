@@ -25,6 +25,7 @@
     <modules>
         <module>taco_web</module>
         <module>taco_kichen</module>
+        <module>taco_flow</module>
     </modules>
 
 

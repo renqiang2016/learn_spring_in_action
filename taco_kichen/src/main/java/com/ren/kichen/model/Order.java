@@ -14,11 +14,11 @@ import java.util.List;
 @Data
 public class Order {
     private Date createdAt;
-    private String deliveryName;
-    private String deliveryStreet;
-    private String deliveryCity;
-    private String deliveryState;
-    private String deliveryZip;
+    private String name;
+    private String street;
+    private String city;
+    private String state;
+    private String zip;
 
     private List<Taco> tacos = new ArrayList<>();
 }

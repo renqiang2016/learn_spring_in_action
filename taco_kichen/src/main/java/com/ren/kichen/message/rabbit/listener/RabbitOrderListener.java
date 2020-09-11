@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @since 2020/9/10 15:21
  */
 @Component
-public class OrderListener {
+public class RabbitOrderListener {
 
     @RabbitListener(queues = "taco.order")
     public void receiveOrder(Order order) {
