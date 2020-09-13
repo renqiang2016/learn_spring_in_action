@@ -26,6 +26,8 @@
         <module>taco_web</module>
         <module>taco_kichen</module>
         <module>taco_flow</module>
+        <module>reactor</module>
+        <module>taco_flux_web</module>
     </modules>
 
 
