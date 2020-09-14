@@ -28,6 +28,8 @@
         <module>taco_flow</module>
         <module>reactor</module>
         <module>taco_flux_web</module>
+        <module>microservice_registry</module>
+        <module>microservice_service</module>
     </modules>
 
 

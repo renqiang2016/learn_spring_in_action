@@ -38,3 +38,11 @@ Path：X:\Artemis\apache-artemis-2.15.0\bin\myartemis\bin
 网页地址：http://localhost:8161/
 默认监听端口号：61616
 ```
+
+## 微服务
+```text
+Path：microservice_registry + microservice_service + microservice_client
+microservice_registry：注册中心，http://localhost:8761/
+microservice_service：微服务提供者
+microservice_client：微服务消费者，http://localhost:8888/ingredients
+```
