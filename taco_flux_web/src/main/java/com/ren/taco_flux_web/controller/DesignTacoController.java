@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import javax.annotation.Resources;
-
 /**
  * @author qiang.ren
  * @version 1.0
@@ -35,7 +33,7 @@ public class DesignTacoController {
     }
 
     @GetMapping("/{id}")
-    public Mono<Taco> tacoById(@PathVariable("id") Long id) {
+    public Mono<Taco> tacoById(@PathVariable("id") String id) {
         return tacoRepository.findById(id);
     }
 

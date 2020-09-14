@@ -1,3 +1,4 @@
+/*
 package com.ren.taco_flux_web.common;
 
 import com.ren.taco_flux_web.repository.UserRepository;
@@ -8,15 +9,14 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.core.userdetails.ReactiveUserDetailsService;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.server.SecurityWebFilterChain;
-import reactor.core.publisher.Mono;
 
-/**
+*
  * @author qiang.ren
  * @version 1.0
  * @since 2020/9/7 23:27
- */
+
+
 @Configuration
 @EnableWebFluxSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -35,14 +35,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public ReactiveUserDetailsService userDetailsService(UserRepository repository) {
-        return new ReactiveUserDetailsService() {
-            @Override
-            public Mono<UserDetails> findByUsername(String username) {
-                return repository.findByUsername(username)
-                        .map(user->{
-                            return user.toUserDetails();
-                        });
-            }
-        };
+        return username -> repository.findByUsername(username)
+                .map(user-> user);
     }
 }
+*/
