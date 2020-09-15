@@ -3,6 +3,7 @@ package com.ren.microservice_service;
 import java.net.URI;
 import java.util.Optional;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -35,8 +36,13 @@ public class IngredientController {
   }
   
   @GetMapping("/{id}")
+  @HystrixCommand(fallbackMethod = "getDefaultbyId")
   public Optional<Ingredient> byId(@PathVariable String id) {
     return repo.findById(id);
+  }
+
+  public Optional<Ingredient> getDefaultbyId(@PathVariable String id) {
+    return null;
   }
   
   @PutMapping("/{id}")

@@ -30,6 +30,7 @@
         <module>taco_flux_web</module>
         <module>microservice_registry</module>
         <module>microservice_service</module>
+        <module>microservice_turbine</module>
     </modules>
 
 

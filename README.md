@@ -46,3 +46,9 @@ microservice_registry：注册中心，http://localhost:8761/
 microservice_service：微服务提供者
 microservice_client：微服务消费者，http://localhost:8888/ingredients
 ```
+## Hystrix断路器
+```text
+Dashboard页面：http://localhost:8888/hystrix/，
+输入：http://localhost:8888/actuator/hystrix.stream
+或输入：http://localhost:9999/turbine.stream
+```
