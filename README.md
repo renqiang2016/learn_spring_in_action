@@ -41,14 +41,25 @@ Path：X:\Artemis\apache-artemis-2.15.0\bin\myartemis\bin
 
 ## 微服务
 ```text
-Path：microservice_registry + microservice_service + microservice_client
+开启：microservice_registry + microservice_service + microservice_client
 microservice_registry：注册中心，http://localhost:8761/
 microservice_service：微服务提供者
 microservice_client：微服务消费者，http://localhost:8888/ingredients
 ```
 ## Hystrix断路器
 ```text
+开启：microservice_client & microservice_turbine
 Dashboard页面：http://localhost:8888/hystrix/，
 输入：http://localhost:8888/actuator/hystrix.stream
 或输入：http://localhost:9999/turbine.stream
+```
+## 查看actuator端点
+```text
+开启：microservice_client
+访问：http://localhost:8888/actuator
+```
+## 查看admin server网页
+```text
+启动：admin_server
+访问：http://localhost:9090/
 ```
