@@ -63,3 +63,10 @@ Dashboard页面：http://localhost:8888/hystrix/，
 启动：admin_server
 访问：http://localhost:9090/
 ```
+
+## 部署microservice_client到docker容器中运行
+```text
+构建镜像：microservice_client项目中执行package打包（构建docker镜像并发送到服务器上）
+启动容器：可以通过命令行，也可以通过idea操作
+访问：http://192.168.71.131:32770/ingredients（端口号可以通过docker ps查看）
+```
