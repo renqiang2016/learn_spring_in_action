@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <pluginGroups>
+
+    </pluginGroups>
+
+    <proxies>
+		
+    </proxies>
+
+    <servers>
+		<server>
+			<id>nexus-releases</id>
+			<username>admin</username>
+			<password>admin</password>
+		</server>
+		<server>
+			<id>nexus-snapshots</id>
+			<username>admin</username>
+			<password>admin</password>
+		</server>
+    </servers>
+	
+	<!-- 把依赖仓和插件仓指向Nexus仓库组 -->
+	<!-- settings中的profile会在各种项目中保持激活状态 -->
+	<profiles>
+		<profile>
+			<id>nexus</id>
+			<repositories>
+				<repository>
+					<id>nexus</id>
+					<name>Nexus</name>
+					<url>http://localhost:8081/repository/maven-public/</url>
+					<releases><enabled>true</enabled></releases>
+					<snapshots><enabled>true</enabled></snapshots>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>nexus</id>
+					<name>Nexus</name>
+					<url>http://localhost:8081/repository/maven-public/</url>
+					<releases><enabled>true</enabled></releases>
+					<snapshots><enabled>true</enabled></snapshots>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+	</profiles>
+	<activeProfiles>
+		<activeProfile>nexus</activeProfile>
+	</activeProfiles>
+	
+	<localRepository>X:\Maven\repository</localRepository>
+    
+    <mirrors>
+		<!-- 本地的私有仓库 -->
+		<mirror>
+	      <id>nexus</id>
+	      <name>my nexus maven</name>
+	      <url>http://localhost:8081/repository/maven-public/</url>
+	      <mirrorOf>*</mirrorOf>        
+	    </mirror>
+		<!-- 阿里的仓库 -->
+	    <mirror>
+	      <id>alimaven</id>
+	      <name>aliyun maven</name>
+	      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+	      <mirrorOf>central</mirrorOf>        
+	    </mirror>
+		<!-- 中央仓库在中国的镜像 -->
+		<mirror>
+			<id>maven.net.cn</id>
+			<name>oneof the central mirrors in china</name>
+			<url>http://maven.net.cn/content/groups/public/</url>
+			<mirrorOf>central</mirrorOf>
+		</mirror>
+		<!-- 中央仓库 -->
+		<mirror>
+			<id>central</id>
+			<name>Maven Repository Switchboard</name>
+			<url>http://repo1.maven.org/maven2/</url>
+			<mirrorOf>central</mirrorOf>
+		</mirror>
+		<mirror>
+			<id>repo2</id>
+			<mirrorOf>central</mirrorOf>
+			<name>Human Readable Name for this Mirror.</name>
+			<url>http://repo2.maven.org/maven2/</url>
+		</mirror>
+    </mirrors>
+</settings>
